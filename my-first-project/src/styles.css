@@ -1,0 +1,11 @@
+body{
+    background-image: url(../src/assets/photos/pexels-cmonphotography-1809644.jpg);
+    background-attachment: fixed;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.725);
+    background-blend-mode:darken;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+}

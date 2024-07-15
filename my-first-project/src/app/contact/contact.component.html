@@ -1,0 +1,47 @@
+<div class="contact-main">
+  <div class="contact-sub">
+    <div>
+      <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+        <div class="contact-sub-1">
+          <div><label class="lbl-main-conatct">CONTACT</label></div>
+          <div class="contact-sub-3">
+            <div><input type="Name" placeholder="Name" class="txt_1" [formControl]="name" /><br><label class="lbl-error" *ngIf="name?.hasError('pattern')">Invalid Name </label></div>
+            <div><input type="Email" placeholder="Email" class="txt_1" [formControl]="emails"/><br><label class="lbl-error" *ngIf="emails?.hasError('pattern')">Invalid Email </label></div>
+          </div>
+          <div>
+            <input type="Subject" placeholder="Subject" [formControl] = "subject"/><br>
+            <label class="lbl-error" *ngIf="subject?.hasError('pattern')">Invalid Subject </label>
+          </div>
+          <div><textarea placeholder="Message" [formControl] = "message"></textarea></div>
+          <br><label class="lbl-error" *ngIf="message?.hasError('pattern')">Invalid Message </label>
+          <div><button type="submit">submit</button></div>
+        </div>
+      </form>
+    </div>
+    <div class="contact-sub-2">
+      <div>
+        <label>Nadeesha Ruwandima</label><br />
+        <label>UX/UI Designer</label>
+      </div>
+      <div class="contact-sub-4">
+        <div><label style="color: red">Phone</label></div>
+        <div><label>071 176 4232</label></div>
+      </div>
+      <div class="contact-sub-4">
+        <div><label style="color: red">Email</label></div>
+        <div>
+          <label>{{ email }}</label>
+        </div>
+      </div>
+      <div class="contact-sub-5">
+        <div><img src="assets/photos/instagram.png" /></div>
+        <div><img src="assets/photos/telegram.png" /></div>
+        <div><img src="assets/photos/whatsapp.png" /></div>
+        <div><img src="assets/photos/facebook.png" /></div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-lbl">
+    <label>{{ ftitle }}</label>
+  </div>
+</div>
